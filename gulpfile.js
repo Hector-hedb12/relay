@@ -193,7 +193,7 @@ const builds = [
     ],
   },
   {
-    package: 'custom-react-relay',
+    package: 'react-relay',
     exports: {
       index: 'index.js',
     },
