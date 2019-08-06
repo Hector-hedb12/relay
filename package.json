@@ -1,5 +1,5 @@
 {
-  "name": "relay",
+  "name": "custom-relay",
   "description": "A framework for building data-driven React applications.",
   "version": "5.0.0",
   "license": "MIT",
