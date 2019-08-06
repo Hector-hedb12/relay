@@ -1,5 +1,5 @@
 {
-  "name": "react-relay",
+  "name": "custom-react-relay",
   "description": "A framework for building GraphQL-driven React applications.",
   "version": "5.0.0",
   "keywords": [
