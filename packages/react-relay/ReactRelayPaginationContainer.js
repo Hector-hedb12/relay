@@ -328,13 +328,6 @@ function createContainerWithFragments<
     connectionConfig.getConnectionFromProps ||
     createGetConnectionFromProps(metadata);
 
-  const direction = connectionConfig.direction || metadata.direction;
-  invariant(
-    direction,
-    'ReactRelayPaginationContainer: Unable to infer direction of the ' +
-      'connection, possibly because both first and last are provided.',
-  );
-
   const getFragmentVariables =
     connectionConfig.getFragmentVariables ||
     createGetFragmentVariables(metadata);
@@ -471,7 +464,7 @@ function createContainerWithFragments<
       this.setState({data: this._resolver.resolve()});
     };
 
-    _getConnectionData(): ?{
+    _getConnectionData(direction: string): ?{
       cursor: ?string,
       edgeCount: number,
       hasMore: boolean,
@@ -594,6 +587,7 @@ function createContainerWithFragments<
     };
 
     _loadMore = (
+      direction: string,
       pageSize: number,
       observerOrCallback: ?ObserverOrCallback,
       options: ?RefetchOptions,
